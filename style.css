@@ -1,0 +1,7 @@
+/* Box styles */
+.resultsBox {
+    white-space: pre;
+    border: none;
+    font: "Lucida Console", Monaco, monospace;
+    overflow: scroll;
+}

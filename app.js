@@ -32,9 +32,12 @@ function loaded(evt) {
 SendMode Input                      ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir, %A_ScriptDir%\\..     ; Ensures a consistent starting directory. Relative path to AHK folder from core.ahk.
 SetTitleMatchMode, 2                ; 2: A window's title can contain WinTitle anywhere inside it to be a match.
-
 Return
-; ================================= ; End of Auto-Execute Section
+
+; Personal Hotkey section
+; Add your hotkeys here. For more information see: https://www.autohotkey.com/docs/Hotkeys.htm
+; ==============================================================================
+^!r::Reload  ; ctrl-alt-r Reload all scripts.
 
 ; Personal Hotstring Section.
 ; Add your hotstrings here. For more information see: https://www.autohotkey.com/docs/Hotstrings.htm
@@ -42,7 +45,6 @@ Return
 
     var output = [];
     output.push(header)
-    output.push("^!r::Reload  ; ctrl-alt-r Reload all scripts.")
     allItems.forEach(function(element) {
         var hotString = element.childNodes[0].innerText.trim()
         var resultText = element.childNodes[1].innerText.trim()

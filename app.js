@@ -42,6 +42,7 @@ Return
 
     var output = [];
     output.push(header)
+    output.push("^!r::Reload  ; ctrl-alt-r Reload all scripts.")
     allItems.forEach(function(element) {
         var hotString = element.childNodes[0].innerText.trim()
         var resultText = element.childNodes[1].innerText.trim()
